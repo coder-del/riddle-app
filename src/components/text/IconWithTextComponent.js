@@ -17,16 +17,22 @@ const styles = StyleSheet.create({
   },
 });
 
-// icon with text at right or left
-
-function IconWithTextComponent(props) {
-  const {icon, iconStyle, textStyle, position, text, ...attr} = props;
+function IconWithTextComponent({
+  icon,
+  iconStyle,
+  textStyle,
+  position,
+  text,
+  ...attr
+}) {
+  const newSource =
+    typeof icon === 'string' && icon?.startsWith('http') ? {uri: icon} : icon;
   return (
     <Row style={styles.container}>
       {position === 'left' && (
         <LightTextComponent style={textStyle} {...attr} lightText={text} />
       )}
-      <Image source={icon} style={iconStyle} />
+      <Image source={newSource} style={iconStyle} />
       {position === 'right' && (
         <LightTextComponent style={textStyle} lightText={text} {...attr} />
       )}
@@ -38,12 +44,14 @@ IconWithTextComponent.defaultProps = {
   position: 'left',
   iconStyle: styles.logo,
   textStyle: styles.textWrap,
-  // icon: '',
+  icon: '',
 };
-PropTypes.defaultProps = {
+
+IconWithTextComponent.PropTypes = {
   position: PropTypes.string,
   iconStyle: PropTypes.string,
   textStyle: PropTypes.object,
-  // icon: PropTypes.any,
+  icon: PropTypes.any,
 };
+
 export default IconWithTextComponent;

@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 });
-//Text with Click Functionality
 
 function CustomTextButton({onClick, style, textStyle, text}) {
   return (
@@ -17,13 +16,16 @@ function CustomTextButton({onClick, style, textStyle, text}) {
     </TouchableOpacity>
   );
 }
+
 CustomTextButton.defaultProps = {
-  iconStyle: styles.text,
+  style: styles.text,
 };
-PropTypes.defaultProps = {
+
+CustomTextButton.PropTypes = {
   style: PropTypes.object,
   onClick: PropTypes.func,
   text: PropTypes.string,
   textStyle: PropTypes.object,
 };
+
 export default CustomTextButton;

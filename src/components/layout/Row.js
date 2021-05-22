@@ -10,8 +10,6 @@ const styles = StyleSheet.create({
   },
 });
 
-//Align items Horizontally
-
 function Row({style, children}) {
   return <View style={[styles.container, style]}>{children}</View>;
 }
@@ -19,7 +17,9 @@ function Row({style, children}) {
 Row.defaultProps = {
   style: styles.container,
 };
-PropTypes.defaultProps = {
+
+Row.PropTypes = {
   style: PropTypes.object,
 };
+
 export default Row;

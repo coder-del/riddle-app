@@ -13,14 +13,13 @@ const styles = StyleSheet.create({
   },
 });
 
-//Icon with Click Functionality
 function CustomIconButton({onClick, icon, iconStyle, shape}) {
-  // console.log('<>adsd', icon);
+  const newSource =
+    typeof icon === 'string' && icon?.startsWith('http') ? {uri: icon} : icon;
   return (
     <TouchableWithoutFeedback onPress={onClick}>
       <Image
-        // source={icon}
-        source={icon}
+        source={newSource}
         style={[
           styles.logo,
           iconStyle,
@@ -33,13 +32,13 @@ function CustomIconButton({onClick, icon, iconStyle, shape}) {
 
 CustomIconButton.defaultProps = {
   iconStyle: {},
-  // icon: null,
+  icon: null,
 };
 
-PropTypes.defaultProps = {
+CustomIconButton.PropTypes = {
   onClick: PropTypes.func,
   shape: PropTypes.string,
   iconStyle: PropTypes.any,
-  // icon: PropTypes.any,
+  icon: PropTypes.any,
 };
 export default CustomIconButton;

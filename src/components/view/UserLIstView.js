@@ -27,8 +27,6 @@ const styles = (user, item) =>
     },
   });
 
-// Text component wrapper
-
 function UserListView(props) {
   const {setShowUsers} = props;
   const {user, setUser} = useContext(AppContext);

@@ -9,10 +9,7 @@ const styles = StyleSheet.create({
   },
 });
 
-// text light
-
-function LightTextComponent(props) {
-  const {style, lightText, ...attr} = props;
+function LightTextComponent({style, lightText, ...attr}) {
   return (
     <Text style={style} {...attr}>
       {lightText}
@@ -24,8 +21,10 @@ LightTextComponent.defaultProps = {
   style: styles.lightText,
   lightText: '',
 };
-PropTypes.defaultProps = {
+
+LightTextComponent.PropTypes = {
   style: PropTypes.object,
   lightText: PropTypes.string,
 };
+
 export default LightTextComponent;

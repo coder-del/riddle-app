@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   commentText: {
-    paddingHorizontal: 5,
     fontSize: 14,
   },
   headText: {
@@ -31,8 +30,6 @@ const styles = StyleSheet.create({
     width: 35,
   },
 });
-
-//user image with their comments at comment screen
 
 function CommentsComponent({userImages, headerText, comment}) {
   return (
@@ -54,8 +51,10 @@ CommentsComponent.defaultProps = {
   headerText: '',
   comment: '',
 };
-PropTypes.defaultProps = {
+
+CommentsComponent.PropTypes = {
   headerText: PropTypes.string,
   comment: PropTypes.string,
 };
+
 export default CommentsComponent;

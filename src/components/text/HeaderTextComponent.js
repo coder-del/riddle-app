@@ -8,28 +8,25 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'justify',
+    marginRight: 10,
   },
 });
 
-// Bold Text
-
-function HeaderTextComponent(props) {
-  const {style, ...attr} = props;
+function HeaderTextComponent({style, headerText, ...attr}) {
   return (
-    <>
-      <Text style={style} {...attr}>
-        {props.headerText}
-      </Text>
-    </>
+    <Text style={[styles.boldText, style]} {...attr}>
+      {headerText}{' '}
+    </Text>
   );
 }
 
 HeaderTextComponent.defaultProps = {
-  style: styles.boldText,
   headerText: '',
 };
-PropTypes.defaultProps = {
+
+HeaderTextComponent.PropTypes = {
   style: PropTypes.object,
   headerText: PropTypes.string,
 };
+
 export default HeaderTextComponent;

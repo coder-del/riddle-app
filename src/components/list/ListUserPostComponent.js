@@ -2,11 +2,8 @@ import React from 'react';
 import {FlatList} from 'react-native';
 import PropTypes from 'prop-types';
 
-import * as users from '../../utilities/mockUserData';
+import * as users from '../../utilities/userPostsData';
 import ItemViewComponent from './ItemViewComponent';
-
-
-//listing user post at home screen
 
 function ListUserPostComponent({onPress}) {
   const renderItem = ({item}) => (
@@ -32,7 +29,9 @@ function ListUserPostComponent({onPress}) {
 ListUserPostComponent.defaultProps = {
   onPress: null,
 };
-PropTypes.defaultProps = {
+
+ListUserPostComponent.PropTypes = {
   onPress: PropTypes.func,
 };
+
 export default ListUserPostComponent;

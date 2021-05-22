@@ -21,8 +21,6 @@ const styles = StyleSheet.create({
   },
 });
 
-// Adding Comments  to user array ; footer of comment screen
-
 function AddComments(props) {
   const [comment, setComments] = useState('');
 
@@ -32,7 +30,7 @@ function AddComments(props) {
         <CustomIconButton
           icon={props?.userImage}
           shape="rounded"
-          imageStyle={styles.logo}
+          iconStyle={styles.logo}
         />
         <TextWithInput
           title={'Add a comment...'}
@@ -58,7 +56,7 @@ AddComments.defaultProps = {
   title: 'Add data',
 };
 
-PropTypes.defaultProps = {
+AddComments.PropTypes = {
   setName: PropTypes.func,
   title: PropTypes.string,
 };

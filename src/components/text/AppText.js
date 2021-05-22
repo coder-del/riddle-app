@@ -8,10 +8,7 @@ const styles = StyleSheet.create({
   },
 });
 
-// Text component wrapper
-
-function AppText(props) {
-  const {style, children, ...attr} = props;
+function AppText({style, children, ...attr}) {
   return (
     <Text style={style} {...attr}>
       {children}
@@ -22,7 +19,9 @@ function AppText(props) {
 AppText.defaultProps = {
   style: styles.container,
 };
-PropTypes.defaultProps = {
+
+AppText.PropTypes = {
   style: PropTypes.object,
 };
+
 export default AppText;

@@ -58,12 +58,11 @@ function CommentScreen({navigation}) {
   );
 
   const handleAddComment = (comment, index) => {
-    // console.log('<>here', comment, comments);
     if (comment?.length > 0) {
       setComments([
         ...comments,
         {
-          // key: {index},
+          key: {index},
           userId: user?.id,
           comment: comment,
           userFullName: user?.name,
@@ -79,7 +78,7 @@ function CommentScreen({navigation}) {
         contentContainerStyle={styles.commentListContainer}
         data={comments}
         renderItem={renderItem}
-        keyExtractor={item => item.userId}
+        keyExtractor={item => item.key}
       />
       <AddComments onPressPost={handleAddComment} userImage={user?.image} />
     </View>

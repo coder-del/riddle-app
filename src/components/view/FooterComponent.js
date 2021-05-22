@@ -38,24 +38,24 @@ const styles = StyleSheet.create({
   },
 });
 
-// like comment add comment of user post at home screen
-
 function FooterComponent({onPress}) {
   const {user} = useContext(AppContext);
 
   return (
     <View>
       <Row style={styles.footerWrapper}>
-        <CustomIconButton icon={likeIcon} iconStyle={styles.likeIcon} />
-        <TouchableWithoutFeedback onPress={onPress}>
-          <IconWithTextComponent
-            icon={commentIcon}
-            text={'19 comments'}
-            textStyle={styles.commentText}
-            position={'right'}
-            iconStyle={styles.commentIcon}
-          />
-        </TouchableWithoutFeedback>
+        <Row>
+          <CustomIconButton icon={likeIcon} iconStyle={styles.likeIcon} />
+          <TouchableWithoutFeedback onPress={onPress}>
+            <IconWithTextComponent
+              icon={commentIcon}
+              text={'19 comments'}
+              textStyle={styles.commentText}
+              position={'right'}
+              iconStyle={styles.commentIcon}
+            />
+          </TouchableWithoutFeedback>
+        </Row>
         <Row>
           <CustomTextButton
             text={'Add a Comment'}
@@ -72,7 +72,9 @@ function FooterComponent({onPress}) {
 FooterComponent.defaultProps = {
   onPress: null,
 };
-PropTypes.defaultProps = {
+
+FooterComponent.PropTypes = {
   onPress: PropTypes.func,
 };
+
 export default FooterComponent;

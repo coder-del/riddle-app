@@ -18,10 +18,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   pictureTile: {
-    borderRadius: 8,
+    borderRadius: 4,
     height: 140,
-    resizeMode: 'contain',
+    resizeMode: 'cover',
     width: '100%',
+    marginBottom: 16,
   },
   lightText: {
     color: '#A9A9A9',
@@ -36,8 +37,6 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
   },
 });
-
-// each item in the user's post list in home screen
 
 function ItemViewComponent({userIcon, lightText, headerText, date, icon}) {
   const navigation = useNavigation();
@@ -71,7 +70,8 @@ ItemViewComponent.defaultProps = {
   headerText: '',
   date: '',
 };
-PropTypes.defaultProps = {
+
+IconWithTextComponent.PropTypes = {
   iconStyle: PropTypes.object,
   lightText: PropTypes.string,
   headerText: PropTypes.string,
