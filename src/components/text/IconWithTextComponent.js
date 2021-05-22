@@ -47,7 +47,7 @@ IconWithTextComponent.defaultProps = {
   icon: '',
 };
 
-IconWithTextComponent.PropTypes = {
+IconWithTextComponent.propTypes = {
   position: PropTypes.string,
   iconStyle: PropTypes.string,
   textStyle: PropTypes.object,

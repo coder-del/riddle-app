@@ -22,7 +22,7 @@ LightTextComponent.defaultProps = {
   lightText: '',
 };
 
-LightTextComponent.PropTypes = {
+LightTextComponent.propTypes = {
   style: PropTypes.object,
   lightText: PropTypes.string,
 };

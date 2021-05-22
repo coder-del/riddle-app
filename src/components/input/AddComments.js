@@ -56,7 +56,7 @@ AddComments.defaultProps = {
   title: 'Add data',
 };
 
-AddComments.PropTypes = {
+AddComments.propTypes = {
   setName: PropTypes.func,
   title: PropTypes.string,
 };

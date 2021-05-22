@@ -18,7 +18,7 @@ Row.defaultProps = {
   style: styles.container,
 };
 
-Row.PropTypes = {
+Row.propTypes = {
   style: PropTypes.object,
 };
 

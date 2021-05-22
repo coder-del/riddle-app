@@ -21,7 +21,7 @@ CustomTextButton.defaultProps = {
   style: styles.text,
 };
 
-CustomTextButton.PropTypes = {
+CustomTextButton.propTypes = {
   style: PropTypes.object,
   onClick: PropTypes.func,
   text: PropTypes.string,

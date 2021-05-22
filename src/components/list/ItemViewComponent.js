@@ -71,7 +71,7 @@ ItemViewComponent.defaultProps = {
   date: '',
 };
 
-IconWithTextComponent.PropTypes = {
+IconWithTextComponent.propTypes = {
   iconStyle: PropTypes.object,
   lightText: PropTypes.string,
   headerText: PropTypes.string,

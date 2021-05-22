@@ -52,7 +52,7 @@ CommentsComponent.defaultProps = {
   comment: '',
 };
 
-CommentsComponent.PropTypes = {
+CommentsComponent.propTypes = {
   headerText: PropTypes.string,
   comment: PropTypes.string,
 };

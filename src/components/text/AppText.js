@@ -20,7 +20,7 @@ AppText.defaultProps = {
   style: styles.container,
 };
 
-AppText.PropTypes = {
+AppText.propTypes = {
   style: PropTypes.object,
 };
 

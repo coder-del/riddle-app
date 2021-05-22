@@ -73,7 +73,7 @@ FooterComponent.defaultProps = {
   onPress: null,
 };
 
-FooterComponent.PropTypes = {
+FooterComponent.propTypes = {
   onPress: PropTypes.func,
 };
 

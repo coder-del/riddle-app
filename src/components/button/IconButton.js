@@ -35,7 +35,7 @@ CustomIconButton.defaultProps = {
   icon: null,
 };
 
-CustomIconButton.PropTypes = {
+CustomIconButton.propTypes = {
   onClick: PropTypes.func,
   shape: PropTypes.string,
   iconStyle: PropTypes.any,

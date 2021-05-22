@@ -21,7 +21,7 @@ function TextWithInput({inputTextStyle, setName, value, title}) {
   );
 }
 
-TextWithInput.defaultProps = {
+TextWithInput.propTypes = {
   setName: () => {},
   title: 'Add data',
   value: '',

@@ -24,7 +24,7 @@ HeaderTextComponent.defaultProps = {
   headerText: '',
 };
 
-HeaderTextComponent.PropTypes = {
+HeaderTextComponent.propTypes = {
   style: PropTypes.object,
   headerText: PropTypes.string,
 };

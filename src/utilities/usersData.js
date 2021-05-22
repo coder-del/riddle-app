@@ -15,14 +15,4 @@ export const DATA = [
     name: 'Shive',
     image: 'https://i.pravatar.cc/300?img=16',
   },
-  {
-    id: 4,
-    name: 'Gracy',
-    image: 'https://i.pravatar.cc/300?img=17',
-  },
-  {
-    id: 5,
-    name: 'Fabio',
-    image: 'https://i.pravatar.cc/300?img=18',
-  },
 ];

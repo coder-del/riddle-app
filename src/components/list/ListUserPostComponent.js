@@ -30,7 +30,7 @@ ListUserPostComponent.defaultProps = {
   onPress: null,
 };
 
-ListUserPostComponent.PropTypes = {
+ListUserPostComponent.propTypes = {
   onPress: PropTypes.func,
 };
 
